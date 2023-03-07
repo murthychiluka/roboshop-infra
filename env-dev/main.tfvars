@@ -6,4 +6,4 @@ frontend = {
 }
 }
 
-  
+  env = "dev"
