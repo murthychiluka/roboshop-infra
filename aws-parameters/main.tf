@@ -4,4 +4,5 @@ resource "aws_ssm_parameter" "parameter" {
   type  = var.parameters[count.index].type
   value = var.parameters[count.index].value
 }
- variable "parameter" {}
+ variable "parameters" {}
+ #
