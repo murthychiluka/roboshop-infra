@@ -1,5 +1,5 @@
 dev-apply:
 	echo dev-apply
 
-dev-destroy
+dev-destroy:
 	echo dev-destroy
