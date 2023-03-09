@@ -86,7 +86,7 @@ resource "aws_iam_policy" "ssm-policy" {
             "Resource": "*"
         }
     ]
-}
+ }
 
 resource "aws_iam_role" "role" {
   name = "${var.env}.${var.component}-role"
@@ -106,9 +106,8 @@ resource "aws_iam_role" "role" {
 }
 
 resource "aws_iam_instance_profile" "profile" {
-  name = ""${var.env}-${var.component}-role"
+  name = "${var.env}-${var.component}-role"
   role = aws_iam_role.role.name
-}
 
 resource "aws_iam_role_policy_attachment" "policy-attach" {
   role       = aws_iam_role.role.name
