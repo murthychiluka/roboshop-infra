@@ -85,8 +85,8 @@ resource "aws_iam_policy" "ssm-policy" {
             "Action": "ssm:DescribeParameters",
             "Resource": "*"
         }
-    ]
- }
+    })
+  }
 
 resource "aws_iam_role" "role" {
   name = "${var.env}.${var.component}-role"
