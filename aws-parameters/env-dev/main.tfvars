@@ -20,3 +20,7 @@ parameters = [
   { name = "dev.cart.catalogue_host", value = "catalogue-dev.murthychiluka.online", type = "String" },
   { name = "dev.cart.catalogue_port", value = "8080", type = "String" }
 ]
+
+secrets = [
+    { name = "murthy", value = "8080", type = "SecureString" }
+]
