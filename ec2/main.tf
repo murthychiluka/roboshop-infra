@@ -85,7 +85,7 @@ resource "aws_iam_policy" "ssm-policy" {
             "Action": "ssm:DescribeParameters",
             "Resource": "*"
         }
-    })
+    }),
   }
 
 resource "aws_iam_role" "role" {
