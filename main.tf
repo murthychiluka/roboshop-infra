@@ -6,7 +6,4 @@ module "vpc" {
  cidr = each.value["vpc_cidr"]
 }
 
- tags = {
-   Name = "${var.env}-vpc"
-
- }
+ 
