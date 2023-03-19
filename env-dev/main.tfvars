@@ -1,4 +1,5 @@
 env = "dev"
+
 vpc = {
   main = {
     vpc_cidr = "10.0.0.0/16"
@@ -14,8 +15,6 @@ vpc = {
         cidr_block        = "10.0.1.0/24"
         availability_zone = "us-east-1b"
       }
-
-
     }
 
     private_subnets = {
@@ -44,11 +43,12 @@ vpc = {
         cidr_block        = "10.0.6.0/24"
         availability_zone = "us-east-1a"
       }
-      app-az2 = {
+      db-az2 = {
         name              = "db-az2"
         cidr_block        = "10.0.7.0/24"
         availability_zone = "us-east-1b"
       }
     }
+
   }
 }
