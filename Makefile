@@ -1,5 +1,5 @@
 git:
-	git pull
+	#git pull
 	rm -rf .terraform
 dev-apply:git
 	terraform init -backend-config=env-dev/state.tfvars 
@@ -9,4 +9,4 @@ dev-apply:git
 dev-destroy:
 	terraform init -backend-config=env-dev/state.tfvars
 	terraform destroy -auto-approve -var-file=env-dev/main.tfvars
-	#
+	
