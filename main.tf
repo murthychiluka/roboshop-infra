@@ -27,9 +27,8 @@ module "docdb" {
   no_of_instances         = each.value["no_of_instances"]
   instance_class          = each.value["instance_class"]
 
-
-
 }
+
 module "rds" {
   source = "git::https://github.com/murthychiluka/tf-module-rds.git"
   env    = var.env
