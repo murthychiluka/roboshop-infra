@@ -37,6 +37,8 @@ module "rds" {
   backup_retention_period = each.value["backup_retention_period"]
   preferred_backup_window = each.value["preferred_backup_window"]
 
+  subnet_ids = local.db_subnet_ids
+
 
 
 
