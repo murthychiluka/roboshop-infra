@@ -81,7 +81,7 @@ module "alb" {
   name               = each.value["name"]
   internal           = each.value["internal"]
   load_balancer_type = each.value["load_balancer_type"]
-  subnet_ids         = lookup(local.subnet_ids, each.value["subnet_name"], null)
+  subnet_ids         = lookup(local.subnet_ids, each.value["subnet_name"])
 
 
 
