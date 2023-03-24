@@ -85,7 +85,17 @@ module "alb" {
 
 }
 
+module "app" {
+  source = "git::https://github.com/murthychiluka/tf-module-app.git"
+  env    = var.env
+  tags   = var.tags
 
+  for_each = var.app
+  
+
+
+
+}
 
 # output "vpc" {
 #   value = module.vpc
