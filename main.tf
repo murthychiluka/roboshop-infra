@@ -90,9 +90,14 @@ module "app" {
   env    = var.env
   tags   = var.tags
 
-  for_each      = var.app
-  component     = each.value["component"]
-  instance_type = each.value["instance_type"]
+  for_each         = var.app
+  component        = each.value["component"]
+  instance_type    = each.value["instance_type"]
+  desired_capacity = each.value["desired_capacity"]
+  max_size         = each.value["max_size"]
+  min_size         = each.value["min_size"]
+
+
 
 
 
