@@ -83,9 +83,6 @@ module "alb" {
   load_balancer_type = each.value["load_balancer_type"]
   subnet_ids         = lookup(local.subnet_ids, each.value["subnet_name"], null)
 
-
-
-
 }
 
 
