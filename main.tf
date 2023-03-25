@@ -86,9 +86,11 @@ module "vpc" {
 # }
 
 module "app" {
-  source = "git::https://github.com/murthychiluka/tf-module-app.git"
-  env    = var.env
-  tags   = var.tags
+  source       = "git::https://github.com/murthychiluka/tf-module-app.git"
+  env          = var.env
+  tags         = var.tags
+  vpc_id       = module.vpc["main"].vpc_id
+  bastion_cidr = var.bastion_cidr
 
   for_each         = var.app
   component        = each.value["component"]
