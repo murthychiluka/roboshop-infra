@@ -1,5 +1,5 @@
-env = "dev"
-bastion_host = [ "172.31.13.185/32" ]
+env          = "dev"
+bastion_host = ["172.31.13.185/32"]
 
 vpc = {
   main = {
@@ -11,7 +11,7 @@ vpc = {
         cidr_block        = "10.0.0.0/24"
         availability_zone = "us-east-1a"
       }
-      public-az2 = {""
+      public-az2 = {
         name              = "public-az2"
         cidr_block        = "10.0.1.0/24"
         availability_zone = "us-east-1b"
