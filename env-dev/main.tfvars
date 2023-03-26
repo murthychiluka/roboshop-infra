@@ -1,5 +1,6 @@
 env          = "dev"
 bastion_cidr = ["172.31.13.185/32"]
+dns_domain   = "murthychiluka.online"
 
 vpc = {
   main = {
@@ -109,6 +110,7 @@ alb = {
     internal           = "true"
     load_balancer_type = "application"
     allow_cidr         = ["10.0.2.0/24", "10.0.3.0/24", "10.0.4.0/24", "10.0.5.0/24"]
+
   }
 }
 app = {
@@ -121,6 +123,7 @@ app = {
     subnet_name      = "app"
     port             = 8080
     allow_app_to     = "app"
+    alb              = "private"
   }
   cart = {
     component        = "cart"
@@ -131,6 +134,7 @@ app = {
     subnet_name      = "app"
     port             = 8080
     allow_app_to     = "app"
+    alb              = "private"
   }
   user = {
     component        = "user"
@@ -141,6 +145,7 @@ app = {
     subnet_name      = "app"
     port             = 8080
     allow_app_to     = "app"
+    alb              = "private"
   }
   shipping = {
     component        = "shipping"
@@ -151,6 +156,7 @@ app = {
     subnet_name      = "app"
     port             = 8080
     allow_app_to     = "app"
+    alb              = "private"
   }
   payment = {
     component        = "payment"
@@ -161,6 +167,7 @@ app = {
     subnet_name      = "app"
     port             = 8080
     allow_app_to     = "app"
+    alb              = "private"
   }
   frontend = {
     component        = "frontend"
@@ -171,6 +178,7 @@ app = {
     subnet_name      = "web"
     port             = 80
     allow_app_to     = "public"
+    alb              = "public"
   }
 }
 
