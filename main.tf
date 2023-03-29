@@ -38,6 +38,7 @@ module "rds" {
 
   subnet_ids = local.db_subnet_ids
 
+
   for_each                = var.rds
   engine                  = each.value["engine"]
   engine_version          = each.value["engine_version"]
@@ -53,12 +54,15 @@ module "elasticache" {
   tags   = var.tags
 
   subnet_ids = local.db_subnet_ids
+  vpc_id     = module.vpc["main"].vpc_id
 
   for_each        = var.elasticache
   engine          = each.value["engine"]
   engine_version  = each.value["engine_version"]
   num_cache_nodes = each.value["num_cache_nodes"]
   node_type       = each.value["node_type"]
+  allow_subnets   = lookup(local.subnet_cidr, each.value["allow_subnets"], null)
+
 
 }
 
