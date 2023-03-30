@@ -167,7 +167,7 @@ app = {
     allow_app_to      = "app"
     alb               = "private"
     listener_priority = 13
-    parameters        = []
+    parameters        = ["rds"]
   }
   payment = {
     component         = "payment"
