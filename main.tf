@@ -101,12 +101,13 @@ module "alb" {
 }
 
 module "app" {
-  depends_on   = [module.docdb, module.elasticache, module.rds, module.rabbitmq, module.alb]
-  source       = "git::https://github.com/murthychiluka/tf-module-app.git"
-  env          = var.env
-  tags         = var.tags
-  bastion_cidr = var.bastion_cidr
-  dns_domain   = var.dns_domain
+  depends_on       = [module.docdb, module.elasticache, module.rds, module.rabbitmq, module.alb]
+  source           = "git::https://github.com/murthychiluka/tf-module-app.git"
+  env              = var.env
+  tags             = var.tags
+  bastion_cidr     = var.bastion_cidr
+  dns_domain       = var.dns_domain
+  monitoring_nodes = var.monitoring_nodes
 
   vpc_id = module.vpc["main"].vpc_id
 
