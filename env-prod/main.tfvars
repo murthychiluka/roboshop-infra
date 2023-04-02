@@ -1,21 +1,21 @@
-env              = "dev"
+env              = "prod"
 bastion_cidr     = ["172.31.13.185/32"]
 monitoring_nodes = ["172.31.69.247/32"]
 dns_domain       = "murthychiluka.online"
 
 vpc = {
   main = {
-    vpc_cidr = "10.0.0.0/16"
+    vpc_cidr = "10.255.0.0/16"
 
     public_subnets = {
       public-az1 = {
         name              = "public-az1"
-        cidr_block        = "10.0.0.0/24"
+        cidr_block        = "10.255.0.0/24"
         availability_zone = "us-east-1a"
       }
       public-az2 = {
         name              = "public-az2"
-        cidr_block        = "10.0.1.0/24"
+        cidr_block        = "10.255.1.0/24"
         availability_zone = "us-east-1b"
       }
     }
@@ -23,33 +23,33 @@ vpc = {
     private_subnets = {
       web-az1 = {
         name              = "web-az1"
-        cidr_block        = "10.0.2.0/24"
+        cidr_block        = "10.255.2.0/24"
         availability_zone = "us-east-1a"
       }
       web-az2 = {
         name              = "web-az2"
-        cidr_block        = "10.0.3.0/24"
+        cidr_block        = "10.255.3.0/24"
         availability_zone = "us-east-1b"
       }
       app-az1 = {
         name              = "app-az1"
-        cidr_block        = "10.0.4.0/24"
+        cidr_block        = "10.255.4.0/24"
         availability_zone = "us-east-1a"
       }
       app-az2 = {
         name              = "app-az2"
-        cidr_block        = "10.0.5.0/24"
+        cidr_block        = "10.255.5.0/24"
         availability_zone = "us-east-1b"
       }
       db-az1 = {
         name              = "db-az1"
-        cidr_block        = "10.0.6.0/24"
+        cidr_block        = "10.255.6.0/24"
         availability_zone = "us-east-1a"
         subnet_type       = "db"
       }
       db-az2 = {
         name              = "db-az2"
-        cidr_block        = "10.0.7.0/24"
+        cidr_block        = "10.255.7.0/24"
         availability_zone = "us-east-1b"
         subnet_type       = "db"
       }
@@ -114,7 +114,7 @@ alb = {
     name               = "private"
     internal           = "true"
     load_balancer_type = "application"
-    allow_cidr         = ["10.0.2.0/24", "10.0.3.0/24", "10.0.4.0/24", "10.0.5.0/24"]
+    allow_cidr         = ["10.255.2.0/24", "10.255.3.0/24", "10.255.4.0/24", "10.255.5.0/24"]
 
   }
 }
