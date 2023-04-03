@@ -15,22 +15,22 @@ resource "aws_ssm_parameter" "secret" {
 variable "parameters" {}
 variable "secrets" {}
 
-# resource "aws_ssm_parameter" "jenkins_user" {
-#   name  = "jenkins.user"
-#   type  = "String"
-#   value = "admin"
-# }
-
-resource "aws_ssm_parameter" "jenkins_pass" {
-  name  = "jenkins.pass"
-  type  = "SecureString"
-  value = "admin123"
-}
-
 resource "aws_ssm_parameter" "jenkins_user" {
   name  = "jenkins.user"
   type  = "String"
   value = "admin"
 }
+
+# resource "aws_ssm_parameter" "jenkins_pass" {
+#   name  = "jenkins.pass"
+#   type  = "SecureString"
+#   value = "admin123"
+# }
+
+# resource "aws_ssm_parameter" "jenkins_user" {
+#   name  = "jenkins.user"
+#   type  = "String"
+#   value = "admin"
+# }
 
 
