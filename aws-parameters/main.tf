@@ -26,4 +26,3 @@ resource "aws_ssm_parameter" "jenkins_pass" {
   type  = "SecureString"
   value = "admin123"
 }
-
