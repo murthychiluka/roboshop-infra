@@ -1,6 +1,6 @@
 env              = "dev"
 bastion_cidr     = ["172.31.13.185/32"]
-monitoring_nodes = ["172.31.69.247/32"]
+monitoring_nodes = ["172.31.4.81/32"]
 dns_domain       = "murthychiluka.online"
 
 vpc = {
