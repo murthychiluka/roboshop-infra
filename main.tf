@@ -132,9 +132,9 @@ module "app" {
 
 }
 
-output "alb" {
-  value = module.elasticache
-}
+# output "alb" {
+#   value = module.elasticache
+# }
 
 # output "vpc" {
 #   value = module.vpc
