@@ -4,7 +4,7 @@ parameters = [
   { name = "prod.frontend.cart_url", value = "http://cart-prod.murthychiluka.online:80/", type = "String", overwrite = "true" },
   { name = "prod.frontend.shipping_url", value = "http://shipping-prod.murthychiluka.online:80/", type = "String", overwrite = "true" },
   { name = "prod.frontend.payment_url", value = "http://payment-prod.murthychiluka.online:80/", type = "String", overwrite = "true" },
-  { name = "prod.user.mongo", value = "true"", type = "String" },
+  { name = "prod.user.mongo", value = "true", type = "String", overwrite = "true" },
   { name = "prod.user.redis_host", value = "redis-prod.murthychiluka.online", type = "String", overwrite = "true" },
   { name = "prod.user.mongo_url", value = "mongodb://mongodb-prod.murthychiluka.online:27017/catalogue", type = "String", overwrite = "true" },
   { name = "prod.shipping.cart_endpoint", value = "cart-prod.murthychiluka.online:80", type = "String", overwrite = "true" },
