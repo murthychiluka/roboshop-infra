@@ -7,7 +7,7 @@ parameters = [
   { name = "prod.user.mongo", value = "true", type = "String" },
   { name = "prod.user.redis_host", value = "redis-prod.murthychiluka.online", type = "String" },
   { name = "prod.user.mongo_url", value = "mongodb://mongodb-prod.murthychiluka.online:27017/catalogue", type = "String" },
-  { name = "prod.shipping.cart_endpoint", value = "cart-prod.murthychiluka.online:80", type = "String" }
+  { name = "prod.shipping.cart_endpoint", value = "cart-prod.murthychiluka.online:80", type = "String" },
   { name = "prod.shipping.db_host", value = "mysql-prod.murthychiluka.online", type = "String" },
   { name = "prod.payment.cart_host", value = "cart-prod.murthychiluka.online", type = "String" },
   { name = "prod.payment.cart_port", value = "80", type = "String" },
