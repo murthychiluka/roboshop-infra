@@ -14,7 +14,7 @@ parameters = [
   { name = "prod.payment.user_host", value = "user-prod.murthychiluka.online", type = "String", overwrite = "true" },
   { name = "prod.payment.user_port", value = "80", type = "String", overwrite = "true" },
   { name = "prod.payment.amqp_host", value = "rabbitmq-prod.murthychiluka.online", type = "String", overwrite = "true" },
-  { name = "prod.catalogue.mongo", value = ""true"", type = "String", overwrite = "true" },
+  { name = "prod.catalogue.mongo", value = "true", type = "String", overwrite = "true" },
   { name = "prod.catalogue.mongo_url", value = "mongodb://mongodb-prod.murthychiluka.online:27017/users", type = "String", overwrite = "true" },
   { name = "prod.cart.redis_host", value = "redis-prod.murthychiluka.online", type = "String", overwrite = "true" },
   { name = "prod.cart.catalogue_host", value = "catalogue-prod.murthychiluka.online", type = "String", overwrite = "true" },
