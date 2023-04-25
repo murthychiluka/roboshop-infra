@@ -11,7 +11,7 @@ module "vpc" {
   private_subnets = each.value["private_subnets"]
 
 }
-/*
+
 module "docdb" {
   source = "git::https://github.com/murthychiluka/tf-module-docdb.git"
   env    = var.env
@@ -71,9 +71,9 @@ module "elasticache" {
 
 module "rabbitmq" {
   depends_on = [module.vpc]
-  source = "git::https://github.com/murthychiluka/tf-module-rabbitmq.git"
-  env    = var.env
-  tags   = var.tags
+  source     = "git::https://github.com/murthychiluka/tf-module-rabbitmq.git"
+  env        = var.env
+  tags       = var.tags
 
   bastion_cidr = var.bastion_cidr
   dns_domain   = var.dns_domain
@@ -85,6 +85,7 @@ module "rabbitmq" {
   instance_type = each.value["instance_type"]
   allow_subnets = lookup(local.subnet_cidr, each.value["allow_subnets"], null)
 }
+/*
 
 module "alb" {
   source = "git::https://github.com/murthychiluka/tf-module-alb.git"
