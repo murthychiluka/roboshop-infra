@@ -179,7 +179,7 @@ resource "null_resource" "load-gen" {
     ]
   }
 }
-*/
+
 module "minikube" {
   source = "github.com/scholzj/terraform-aws-minikube"
 
@@ -209,7 +209,7 @@ output "MINIKUBE_SERVER" {
 output "KUBE_CONFIG" {
   value = "scp centos@${module.minikube.public_ip}:/home/centos/kubeconfig ~/.kube/config"
 }
-
+*/
 module "eks" {
   source             = "github.com/r-devops/tf-module-eks"
   ENV                = var.env
